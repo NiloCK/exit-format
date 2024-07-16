@@ -51,7 +51,6 @@ contract MyLayer2 {
     }
   }
 }
-
 ```
 
 ```typescript
@@ -76,6 +75,13 @@ const ethExit: SingleAssetExit = {
       amount: "0x05",
       allocationType: AllocationType.withdrawHelper, // call a WithdrawHelper
       metadata: "0x0123", // at the address, and with the calldata, encoded within
+    },
+    {
+      destination:
+        "0xB6DFA9441FBFA754CCECD5CEBCFF8E620F7720BAA32ABF424C73A8D7148CB927", // 32 bytes: another channel
+      amount: "0x05",
+      allocationType: AllocationType.simple,
+      metadata: "0x",
     },
   ],
 };
